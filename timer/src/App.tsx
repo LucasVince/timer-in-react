@@ -1,12 +1,16 @@
+import { useState } from "react";
 import InputTime from "./components/InputTime";
 
 const App = () => {
+  const [min, setMin] = useState<number>(0);
+  const [sec, setSec] = useState<number>(0);
+
   const onMinChange = (value:number) => {
-    console.log(value)
+    setMin(value);
   }
   
   const onSecChange = (value:number) => {
-    console.log(value)
+    setSec(value);
   }
 
   return (
